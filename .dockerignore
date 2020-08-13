@@ -1,0 +1,13 @@
+# Folders
+.app/
+.git/
+.github/
+.Rproj.user/
+man/
+inst/data
+inst/docs
+renv/
+
+# Files
+^docker-compose.yml$
+
