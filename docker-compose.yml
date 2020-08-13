@@ -1,0 +1,23 @@
+services:
+  ######################################################
+  # R Studio Server
+  ######################################################
+  r-flow:
+    image: r-studio-server:4.0.0
+    build:
+      context: ./
+      dockerfile: ./.app/docker/r-flow/Dockerfile
+      args:
+        - R_REPOS='https://mran.microsoft.com/snapshot/2020-04-24'
+        - METAFLOW_VER='2.2.0'
+    container_name: rstudio
+    volumes:
+      - "./:/home/rstudio/rproject"
+    ports:
+      - 8787:8787
+    restart: "no"
+  ######################################################
+version: "3.8"
+networks:
+  default:
+    name: r-flow

@@ -1,0 +1,9 @@
+.Rproj.user
+*.csv
+*.RData
+man/
+.rstudio/
+.local/
+bin/
+.metaflow/
+*.RDS
